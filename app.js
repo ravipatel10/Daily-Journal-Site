@@ -21,15 +21,6 @@ app.use(express.static("public"));
 
 //*********************** For Connect to the Server using mongoose**********************
 
-
-// const url = "mongodb://127.0.0.1:27017/blogDB"; // for local server
-
-// const url = "mongodb+srv://test:test-123@cluster0.gnhpjmb.mongodb.net/blogDB"; // for cloud server using mongodb atlas
-
-// const url = process.env.MONGO_URL;
-
-// console.log(url);
-
 mongoose.set('strictQuery', false);
 
 mongoose.connect(process.env.MONGO_CLOUD_URL, { useNewUrlParser: true, useUnifiedTopology: true })
@@ -63,11 +54,6 @@ app.get("/", function (req, res) {
     res.render("home", {startingContent: homeStartingContent, posts: posts });
 
   });
-
-  // res.render("home", { 
-  //   startingContent: homeStartingContent,
-  //   posts:posts
-  //   });
 
 });
 
@@ -130,5 +116,5 @@ app.get("/posts/:postName", function(req,res){
 });
 
 app.listen(3000, function () {
-  console.log("Server started on port 3000");
+  console.log("The server is running...");
 });
