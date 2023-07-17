@@ -28,13 +28,15 @@ The Daily Journal Site is a web application that enables users to maintain a dai
 
 2. Install the required dependencies:
 
-  cd Daily-Journal-Site
-  npm install
+   ```shell
+   cd Daily-Journal-Site
+   npm install
 
 3. Configure the database connection by providing the MongoDB URL using atlas for cloud connection and use mongosh for local connetion
 
 4. Start the server:
 
+   ```shell
    node app.js
 
 5. Access the application in your web browser at http://localhost:3000. 
